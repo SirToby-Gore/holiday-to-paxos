@@ -1,8 +1,9 @@
 body {
-  position: static;
-  background: linear-gradient(#0d5eaf, #fff);
-  background-repeat: no-repeat;
-  background-size: 105vw 100vh;
+  background: linear-gradient(to bottom, #0d5eaf, #fff);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
 }
 
 nav {
@@ -10,15 +11,29 @@ nav {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  background-color: #094580;
+  background-color: rgba(9, 69, 128, 0.5);
   padding: 10px;
   margin: 0px;
   border-bottom: #fff 3px solid;
+  position: fixed;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  height: 5vh;
 }
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  top: 40%;
+}
+nav img {
+  height: 50px;
+  aspect-ratio: 3/2;
+  top: 0%;
+}
+nav a:hover {
+  color: #91c4f7;
 }
 
 #map-of-paxos {
@@ -26,4 +41,51 @@ nav a {
   aspect-ratio: 1/1;
   margin: 10px;
   border: #0d5eaf 2px solid;
+  border-radius: 10px;
+  margin-top: 10vh;
+}
+#map-of-paxos:not(:hover) {
+  width: min(40vh, 40vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#map-of-paxos:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+
+#places-to-eat {
+  width: 90vw;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+#places-to-eat ul {
+  list-style: none;
+}
+#places-to-eat h1 {
+  color: #fff;
+  text-shadow: -1px -1px 0 #0d5eaf, 1px -1px 0 #0d5eaf, -1px 1px 0 #0d5eaf, 1px 1px 0 #0d5eaf;
+  text-align: center;
+  color: darken;
+  font-size: larger;
+}
+#places-to-eat h2 {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: medium;
+}
+#places-to-eat p {
+  color: #fff;
+  padding: 25px;
+  font-size: small;
+}
+#places-to-eat .map {
+  width: min(40vh, 40vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
 }/*# sourceMappingURL=styles.css.map */
