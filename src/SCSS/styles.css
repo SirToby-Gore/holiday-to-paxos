@@ -1,0 +1,29 @@
+body {
+  position: static;
+  background: linear-gradient(#0d5eaf, #fff);
+  background-repeat: no-repeat;
+  background-size: 105vw 100vh;
+}
+
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  background-color: #094580;
+  padding: 10px;
+  margin: 0px;
+  border-bottom: #fff 3px solid;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#map-of-paxos {
+  width: min(90vh, 90vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+}/*# sourceMappingURL=styles.css.map */

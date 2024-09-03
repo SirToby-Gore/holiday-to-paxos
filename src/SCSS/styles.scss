@@ -1,0 +1,37 @@
+@use 'flag-vars' as *;
+
+body {
+    position: static;
+    background: linear-gradient($blue, $white);
+    background-repeat: no-repeat;
+    background-size: 105vw 100vh;
+}
+
+nav {
+    & {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        background-color: darken($blue, 10%);
+        padding: 10px;
+        margin: 0px;
+        border-bottom: $white 3px solid;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+@mixin map() {
+    width: min(90vh, 90vw);
+    aspect-ratio: 1/1;
+    margin: 10px;
+    border: $blue 2px solid;
+}
+
+#map-of-paxos {
+    @include map;
+}
