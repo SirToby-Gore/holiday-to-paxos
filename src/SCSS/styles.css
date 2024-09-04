@@ -35,13 +35,16 @@ nav a {
   position: relative;
   top: 40%;
 }
-nav img {
-  height: 50px;
-  aspect-ratio: 3/2;
-  top: 0%;
-}
 nav a:hover {
   color: #91c4f7;
+}
+nav a:active {
+  color: #3291f0;
+}
+nav img {
+  max-height: 5vh;
+  aspect-ratio: 3/2;
+  top: 0%;
 }
 
 #map-of-paxos {
@@ -57,7 +60,7 @@ nav a:hover {
 #map-of-paxos:not(:hover) {
   width: min(36vh, 36vw);
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 #map-of-paxos:hover {
   transition-duration: 1s;
@@ -73,6 +76,10 @@ nav a:hover {
 }
 #places-to-eat:hover {
   background-color: rgba(9, 69, 128, 0.3);
+  transition-duration: 0.5s;
+}
+#places-to-eat:not(:hover) {
+  transition-duration: 0.5s;
 }
 #places-to-eat ul {
   list-style: none;
@@ -110,7 +117,7 @@ nav a:hover {
 #places-to-eat .map:not(:hover) {
   width: min(8vh, 8vw);
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 #places-to-eat .map:hover {
   transition-duration: 1s;
@@ -126,7 +133,7 @@ nav a:hover {
 #places-to-eat .map:not(:hover) {
   width: min(16vw, 16vh);
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 #places-to-eat .map:hover {
   transition-duration: 1s;
@@ -142,6 +149,10 @@ nav a:hover {
 }
 #places-to-see:hover {
   background-color: rgba(9, 69, 128, 0.3);
+  transition-duration: 0.5s;
+}
+#places-to-see:not(:hover) {
+  transition-duration: 0.5s;
 }
 #places-to-see ul {
   list-style: none;
@@ -179,7 +190,7 @@ nav a:hover {
 #places-to-see .map:not(:hover) {
   width: min(8vh, 8vw);
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 #places-to-see .map:hover {
   transition-duration: 1s;
@@ -195,7 +206,7 @@ nav a:hover {
 #places-to-see .map:not(:hover) {
   width: min(12vh, 12vw);
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 #places-to-see .map:hover {
   transition-duration: 1s;
@@ -211,6 +222,10 @@ nav a:hover {
 }
 #things-to-do:hover {
   background-color: rgba(9, 69, 128, 0.3);
+  transition-duration: 0.5s;
+}
+#things-to-do:not(:hover) {
+  transition-duration: 0.5s;
 }
 #things-to-do ul {
   list-style: none;
@@ -248,7 +263,7 @@ nav a:hover {
 #things-to-do .map:not(:hover) {
   width: min(8vh, 8vw);
   transition-duration: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 #things-to-do .map:hover {
   transition-duration: 1s;
