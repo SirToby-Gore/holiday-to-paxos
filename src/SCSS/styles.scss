@@ -1,10 +1,82 @@
 @use 'flag-vars' as *;
+@use 'element_vars' as *;
+
+@mixin map($size, $width) {
+    & {
+        width: min($width, $size);
+        aspect-ratio: 1/1;
+        margin: 10px;
+        border: $blue 2px solid;
+        border-radius: 10px;
+    }
+
+    &:not(:hover) {
+        width: min($width/2.5, $size/2.5);
+        transition-duration: 1s;
+        transition-delay: .5s;
+    }
+    &:hover {
+        transition-duration: 1s;
+        transition-delay: .2s;
+    }
+}
+
+@mixin card() {
+    &{
+        width: 90vw;
+        margin: 10px;
+        border: $blue 2px solid;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    &:hover {
+        background-color: rgba(darken($blue, 10%), 0.3);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    h1 {
+        color: $white;
+        text-shadow: -1px -1px 0 $blue, 1px -1px 0 $blue, -1px 1px 0 $blue, 1px 1px 0 $blue;
+        text-align: center; 
+        color: darken;
+        font-size: larger;
+    }
+
+    h2 {
+        color: $white;
+        text-align: center;
+        display: block;
+        font-size: medium;
+    }
+    
+    p {
+        color: $white;
+        padding: 25px;
+        font-size: small;
+        columns: 200px 2;
+        column-gap: 30px;
+        padding: 25px;
+    }
+
+    .map {
+        @include map(20vw, 20vh);
+    }
+}
 
 body {
-    position: static;
-    background: linear-gradient($blue, $white);
-    background-repeat: no-repeat;
-    background-size: 105vw 100vh;
+    background: linear-gradient(to bottom, $blue, $white);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+  }
+
+.padding {
+    height: $nav-height*2;
+    color: transparent;
 }
 
 nav {
@@ -13,26 +85,53 @@ nav {
         display: flex;
         justify-content: space-evenly;
         list-style: none;
-        background-color: darken($blue, 10%);
+        background-color: rgba(darken($blue, 10%), 0.5);
         padding: 10px;
         margin: 0px;
         border-bottom: $white 3px solid;
+        position: fixed;
+        backdrop-filter: blur(1px);
+        height: $nav-height;
+    }
+    &:hover {
+        background-color: rgba(darken($blue, 10%), 0.9);;
     }
     a {
         color: white;
         text-decoration: none;
         font-weight: bold;
+        position: relative;
+        top: 40%;
+    }
+    img {
+        height: 50px;
+        aspect-ratio: 3/2;
+        top: 0%
+    }
+    a:hover {
+        color: lighten($blue, 40%)
     }
 }
 
-@mixin map() {
-    width: min(90vh, 90vw);
-    aspect-ratio: 1/1;
-    margin: 10px;
-    border: $blue 2px solid;
-}
-
 #map-of-paxos {
-    @include map;
+    @include map(90vw, 90vh);
+    margin-top: $nav-height+5vh;
 }
 
+#places-to-eat {
+    @include card;
+    .map {
+        @include map(40vh, 40vw);
+    }
+}
+
+#places-to-see {
+    @include card();
+    .map{
+        @include map(30vw, 30vh);
+    }
+}
+
+#things-to-do {
+    @include card();
+}

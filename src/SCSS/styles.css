@@ -1,8 +1,14 @@
 body {
-  position: static;
-  background: linear-gradient(#0d5eaf, #fff);
-  background-repeat: no-repeat;
-  background-size: 105vw 100vh;
+  background: linear-gradient(to bottom, #0d5eaf, #fff);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
+
+.padding {
+  height: 10vh;
+  color: transparent;
 }
 
 nav {
@@ -10,20 +16,241 @@ nav {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  background-color: #094580;
+  background-color: rgba(9, 69, 128, 0.5);
   padding: 10px;
   margin: 0px;
   border-bottom: #fff 3px solid;
+  position: fixed;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  height: 5vh;
+}
+nav:hover {
+  background-color: rgba(9, 69, 128, 0.9);
 }
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  top: 40%;
+}
+nav img {
+  height: 50px;
+  aspect-ratio: 3/2;
+  top: 0%;
+}
+nav a:hover {
+  color: #91c4f7;
 }
 
+#map-of-paxos {
+  margin-top: 10vh;
+}
 #map-of-paxos {
   width: min(90vh, 90vw);
   aspect-ratio: 1/1;
   margin: 10px;
   border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#map-of-paxos:not(:hover) {
+  width: min(36vh, 36vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#map-of-paxos:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+
+#places-to-eat {
+  width: 90vw;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+#places-to-eat:hover {
+  background-color: rgba(9, 69, 128, 0.3);
+}
+#places-to-eat ul {
+  list-style: none;
+}
+#places-to-eat h1 {
+  color: #fff;
+  text-shadow: -1px -1px 0 #0d5eaf, 1px -1px 0 #0d5eaf, -1px 1px 0 #0d5eaf, 1px 1px 0 #0d5eaf;
+  text-align: center;
+  color: darken;
+  font-size: larger;
+}
+#places-to-eat h2 {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: medium;
+}
+#places-to-eat p {
+  color: #fff;
+  padding: 25px;
+  font-size: small;
+  -moz-columns: 200px 2;
+       columns: 200px 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  padding: 25px;
+}
+#places-to-eat .map {
+  width: min(20vh, 20vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#places-to-eat .map:not(:hover) {
+  width: min(8vh, 8vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-eat .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+#places-to-eat .map {
+  width: min(40vw, 40vh);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#places-to-eat .map:not(:hover) {
+  width: min(16vw, 16vh);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-eat .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+
+#places-to-see {
+  width: 90vw;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+#places-to-see:hover {
+  background-color: rgba(9, 69, 128, 0.3);
+}
+#places-to-see ul {
+  list-style: none;
+}
+#places-to-see h1 {
+  color: #fff;
+  text-shadow: -1px -1px 0 #0d5eaf, 1px -1px 0 #0d5eaf, -1px 1px 0 #0d5eaf, 1px 1px 0 #0d5eaf;
+  text-align: center;
+  color: darken;
+  font-size: larger;
+}
+#places-to-see h2 {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: medium;
+}
+#places-to-see p {
+  color: #fff;
+  padding: 25px;
+  font-size: small;
+  -moz-columns: 200px 2;
+       columns: 200px 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  padding: 25px;
+}
+#places-to-see .map {
+  width: min(20vh, 20vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#places-to-see .map:not(:hover) {
+  width: min(8vh, 8vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-see .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+#places-to-see .map {
+  width: min(30vh, 30vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#places-to-see .map:not(:hover) {
+  width: min(12vh, 12vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-see .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+
+#things-to-do {
+  width: 90vw;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+#things-to-do:hover {
+  background-color: rgba(9, 69, 128, 0.3);
+}
+#things-to-do ul {
+  list-style: none;
+}
+#things-to-do h1 {
+  color: #fff;
+  text-shadow: -1px -1px 0 #0d5eaf, 1px -1px 0 #0d5eaf, -1px 1px 0 #0d5eaf, 1px 1px 0 #0d5eaf;
+  text-align: center;
+  color: darken;
+  font-size: larger;
+}
+#things-to-do h2 {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: medium;
+}
+#things-to-do p {
+  color: #fff;
+  padding: 25px;
+  font-size: small;
+  -moz-columns: 200px 2;
+       columns: 200px 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  padding: 25px;
+}
+#things-to-do .map {
+  width: min(20vh, 20vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#things-to-do .map:not(:hover) {
+  width: min(8vh, 8vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#things-to-do .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
 }/*# sourceMappingURL=styles.css.map */
