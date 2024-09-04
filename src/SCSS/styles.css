@@ -37,15 +37,17 @@ nav a:hover {
 }
 
 #map-of-paxos {
+  margin-top: 10vh;
+}
+#map-of-paxos {
   width: min(90vh, 90vw);
   aspect-ratio: 1/1;
   margin: 10px;
   border: #0d5eaf 2px solid;
   border-radius: 10px;
-  margin-top: 10vh;
 }
 #map-of-paxos:not(:hover) {
-  width: min(40vh, 40vw);
+  width: min(36vh, 36vw);
   transition-duration: 1s;
   transition-delay: 0.5s;
 }
@@ -81,11 +83,107 @@ nav a:hover {
   color: #fff;
   padding: 25px;
   font-size: small;
+  -moz-columns: 200px 2;
+       columns: 200px 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  padding: 25px;
 }
 #places-to-eat .map {
-  width: min(40vh, 40vw);
+  width: min(20vh, 20vw);
   aspect-ratio: 1/1;
   margin: 10px;
   border: #0d5eaf 2px solid;
   border-radius: 10px;
+}
+#places-to-eat .map:not(:hover) {
+  width: min(8vh, 8vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-eat .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+#places-to-eat .map {
+  width: min(40vw, 40vh);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#places-to-eat .map:not(:hover) {
+  width: min(16vw, 16vh);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-eat .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+
+#places-to-see {
+  width: 90vw;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+#places-to-see ul {
+  list-style: none;
+}
+#places-to-see h1 {
+  color: #fff;
+  text-shadow: -1px -1px 0 #0d5eaf, 1px -1px 0 #0d5eaf, -1px 1px 0 #0d5eaf, 1px 1px 0 #0d5eaf;
+  text-align: center;
+  color: darken;
+  font-size: larger;
+}
+#places-to-see h2 {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: medium;
+}
+#places-to-see p {
+  color: #fff;
+  padding: 25px;
+  font-size: small;
+  -moz-columns: 200px 2;
+       columns: 200px 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  padding: 25px;
+}
+#places-to-see .map {
+  width: min(20vh, 20vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#places-to-see .map:not(:hover) {
+  width: min(8vh, 8vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-see .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+#places-to-see .map {
+  width: min(30vh, 30vw);
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border: #0d5eaf 2px solid;
+  border-radius: 10px;
+}
+#places-to-see .map:not(:hover) {
+  width: min(12vh, 12vw);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+#places-to-see .map:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
 }/*# sourceMappingURL=styles.css.map */

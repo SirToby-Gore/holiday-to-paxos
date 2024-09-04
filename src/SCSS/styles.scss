@@ -2,11 +2,23 @@
 @use 'element_vars' as *;
 
 @mixin map($size, $width) {
-    width: min($width, $size);
-    aspect-ratio: 1/1;
-    margin: 10px;
-    border: $blue 2px solid;
-    border-radius: 10px
+    & {
+        width: min($width, $size);
+        aspect-ratio: 1/1;
+        margin: 10px;
+        border: $blue 2px solid;
+        border-radius: 10px;
+    }
+
+    &:not(:hover) {
+        width: min($width/2.5, $size/2.5);
+        transition-duration: 1s;
+        transition-delay: .5s;
+    }
+    &:hover {
+        transition-duration: 1s;
+        transition-delay: .2s;
+    }
 }
 
 @mixin card() {
@@ -40,11 +52,14 @@
     p {
         color: $white;
         padding: 25px;
-        font-size: small
+        font-size: small;
+        columns: 200px 2;
+        column-gap: 30px;
+        padding: 25px;
     }
 
     .map {
-        @include map(40vw, 40vh);
+        @include map(20vw, 20vh);
     }
 }
 
@@ -90,17 +105,18 @@ nav {
 #map-of-paxos {
     @include map(90vw, 90vh);
     margin-top: $nav-height+5vh;
-    &:not(:hover) {
-        width: min(40vh, 40vw);
-        transition-duration: 1s;
-        transition-delay: .5s;
-    }
-    &:hover {
-        transition-duration: 1s;
-        transition-delay: .2s;
-    }
 }
 
 #places-to-eat {
     @include card;
+    .map {
+        @include map(40vh, 40vw);
+    }
+}
+
+#places-to-see {
+    @include card();
+    .map{
+        @include map(30vw, 30vh);
+    }
 }
